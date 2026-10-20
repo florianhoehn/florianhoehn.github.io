@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+
+# Jekyll excludes dot-directories by default, so /.well-known/ would build
+# green and still 404. This is the narrow fix; .nojekyll would disable Jekyll
+# for the whole origin and stop index.md being rendered.
+include: ['.well-known']
